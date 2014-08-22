@@ -19,7 +19,7 @@ Example
 ``` java
 public void onCreate() {
 	super.onCreate();
-	ImageLoader.initialize(this, null, BuildConfig.DEBUG));
+	ImageLoader.initialize(this, null));
 }
 ```
 
