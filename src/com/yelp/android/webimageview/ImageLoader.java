@@ -294,7 +294,7 @@ public class ImageLoader implements Runnable {
 		@Override
 		public int compare(ImageLoader object1, ImageLoader object2) {
 			return (int) (object1.mPriority - object2.mPriority);
-		};
+		}
 	};
 
 	public final String imageUrl;
