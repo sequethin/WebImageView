@@ -263,7 +263,10 @@ public class ImageLoader implements Runnable {
 		}
 	}
 
-	public static final Set<ImageLoader> getSnapShot() {
+    // AS analyzer thinks marking this as final is unnecessary,
+    // but I think it's final for a good reason
+	@SuppressWarnings("FinalStaticMethod")
+    public static final Set<ImageLoader> getSnapShot() {
 		return REQUESTS.getSnapShotAndClean();
 	}
 
