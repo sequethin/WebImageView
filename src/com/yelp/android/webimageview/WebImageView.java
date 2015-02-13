@@ -156,7 +156,8 @@ public class WebImageView extends ImageView {
 			int reqHeight) {
 		reset();
 		if (TextUtils.isEmpty(url)) {
-			return;
+            //noinspection UnnecessaryReturnStatement
+            return;
 		} else if (url.startsWith("http") || url.startsWith("file://")) {
 			mUrl = url;
 			mReqWidth = reqWidth;
