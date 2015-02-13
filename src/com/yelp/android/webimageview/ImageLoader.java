@@ -578,7 +578,6 @@ public class ImageLoader implements Runnable {
 				super.addAll(copy);
 			}
 			return rtVal;
-		};
-
+		}
 	}
 }
