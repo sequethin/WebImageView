@@ -99,6 +99,7 @@ public class ImageCache {
 
 	private int mInMemoryCacheMissCount;
 
+    @SuppressWarnings("SameParameterValue")
     public ImageCache(Context context, int initialCapacity, int concurrencyLevel) {
 		mContext = context;
 		this.mCache = new MapMaker().initialCapacity(initialCapacity).concurrencyLevel(

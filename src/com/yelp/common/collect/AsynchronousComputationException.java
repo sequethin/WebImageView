@@ -21,6 +21,7 @@ package com.yelp.common.collect;
  *
  * @author Bob Lee
  */
+@SuppressWarnings("WeakerAccess")
 public class AsynchronousComputationException extends ComputationException {
   /**
    * Creates a new instance with the given cause.

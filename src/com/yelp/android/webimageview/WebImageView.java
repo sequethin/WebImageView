@@ -30,6 +30,7 @@ import android.widget.ImageView;
 import java.lang.ref.WeakReference;
 import java.util.concurrent.TimeUnit;
 
+@SuppressWarnings("SameParameterValue")
 public class WebImageView extends ImageView {
 
 	public static final String EXTRA_IMAGE_URL = "image_url";

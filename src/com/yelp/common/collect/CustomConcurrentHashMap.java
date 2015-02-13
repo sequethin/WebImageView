@@ -475,6 +475,7 @@ final class CustomConcurrentHashMap {
          * @throws NullPointerException
          *         if entry is null
          */
+        @SuppressWarnings("SameParameterValue")
         boolean removeEntry(E entry, V value);
 
         /**

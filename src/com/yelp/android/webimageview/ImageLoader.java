@@ -63,6 +63,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @author Matthias Kaeppler, modified by Alex Pretzlav
  */
+@SuppressWarnings("SameParameterValue")
 public class ImageLoader implements Runnable {
 
 	private static PausableThreadPoolExecutor executor;
@@ -494,7 +495,8 @@ public class ImageLoader implements Runnable {
 	 * @see http://download.oracle.com/javase/1.5.0/docs/api/java/util/concurrent/ThreadPoolExecutor.html
 	 *
 	 */
-	public static class PausableThreadPoolExecutor extends ThreadPoolExecutor {
+	@SuppressWarnings("SameParameterValue")
+    public static class PausableThreadPoolExecutor extends ThreadPoolExecutor {
 		private final ReentrantLock mLock;
 		private final Condition mPauseCondition;
 		private boolean isPaused;
@@ -553,7 +555,7 @@ public class ImageLoader implements Runnable {
 	 *
 	 * @param <T> The type of the contents this will hold
 	 */
-	@SuppressWarnings("serial")
+	@SuppressWarnings({"serial", "SameParameterValue"})
 	private static final class BoundPriorityBlockingQueue<T> extends PriorityBlockingQueue<T> {
 		private final int mMaxSize;
 

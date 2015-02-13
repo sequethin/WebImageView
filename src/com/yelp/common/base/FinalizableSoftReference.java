@@ -34,6 +34,7 @@ public abstract class FinalizableSoftReference<T> extends SoftReference<T>
    * @param referent to softly reference
    * @param queue that should finalize the referent
    */
+  @SuppressWarnings("SameParameterValue")
   protected FinalizableSoftReference(T referent,
       FinalizableReferenceQueue queue) {
     super(referent, queue.queue);
