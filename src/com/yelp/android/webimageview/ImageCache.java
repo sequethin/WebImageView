@@ -99,9 +99,7 @@ public class ImageCache {
 
 	private int mInMemoryCacheMissCount;
 
-	private BroadcastReceiver mExternalStorageReceiver;
-
-	public ImageCache(Context context, int initialCapacity, int concurrencyLevel) {
+    public ImageCache(Context context, int initialCapacity, int concurrencyLevel) {
 		mContext = context;
 		this.mCache = new MapMaker().initialCapacity(initialCapacity).concurrencyLevel(
 			concurrencyLevel).softValues().makeMap();
@@ -117,12 +115,12 @@ public class ImageCache {
 	 * http://developer.android.com/reference/android/os/Environment.html#getExternalStorageDirectory()
 	 */
 	void registerForExternalStorageUpdates(Context context) {
-		mExternalStorageReceiver = new BroadcastReceiver() {
-			@Override
-			public void onReceive(Context context, Intent intent) {
-				updateExternalStorageState(context);
-			}
-		};
+        BroadcastReceiver mExternalStorageReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                updateExternalStorageState(context);
+            }
+        };
 		IntentFilter filter = new IntentFilter();
 		filter.addAction(Intent.ACTION_MEDIA_MOUNTED);
 		filter.addAction(Intent.ACTION_MEDIA_REMOVED);
