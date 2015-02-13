@@ -49,7 +49,7 @@ public class ReferenceWatcher<T> {
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	private final void clean() {
+	private void clean() {
 		Reference ref = null;
 		while((ref = mQueue.poll()) != null) {
 			T value = (T)ref.get();
